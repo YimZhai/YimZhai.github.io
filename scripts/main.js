@@ -1,35 +1,74 @@
-let myImage = document.querySelector('img');
-myImage.onclick = function () {
-    let mySrc = myImage.getAttribute('src');
-    if (mySrc === 'images/blue.png') {
-        myImage.setAttribute('src', 'images/red.png');
-    } else {
-        myImage.setAttribute('src', 'images/blue.png');
+// generate random number from 1 to 100
+let target = Math.floor(Math.random() * 100 + 1);
+
+const guesses = document.querySelector('.guesses');
+const lastResult = document.querySelector('.lastResult');
+const lowOrHi = document.querySelector('.lowOrHi');
+
+const guessSubmit = document.querySelector('.guessSubmit');
+const guessField = document.querySelector('.guessField');
+
+let guessCount = 1;
+let resetButton;
+
+function checkGuess() {
+    let value = Number(guessField.value);
+    if (guessCount === 1) {
+        guesses.textContent = '上次猜的数：';
     }
-};
+    guesses.textContent += value + ' ';
 
-function setHeading(name) {
-    let myHeading = document.querySelector('h1');
-    myHeading.textContent = '毕竟，' + name + '！';
-    if (name === "大佬") {
-        myHeading.style.color = 'green';
+    if (value === target) {
+        lastResult.textContent = '恭喜你猜对了！';
+        lastResult.style.backgroundColor = 'green';
+        lowOrHi.textContent = '';
+        setGameOver();
+    } else if (guessCount === 10) {
+        lastResult.textContent = 'GAME OVER';
+        lastResult.style.backgroundColor = 'red';
+        setGameOver();
     } else {
-        myHeading.style.color = 'black';
+        lastResult.textContent = '你猜错了！';
+        lastResult.style.backgroundColor = 'red';
+        if (value > target) {
+            lowOrHi.textContent = '你猜高了';
+        } else {
+            lowOrHi.textContent = '你猜低了';
+        }
     }
+
+    guessCount++;
+    guessField.value = '';
+    guessField.focus();
 }
 
-function setUserName() {
-    let myName = prompt('请输入你的名字');
-    localStorage.setItem('name', myName);
-    setHeading(myName);
+guessSubmit.addEventListener('click', checkGuess);
+
+function setGameOver() {
+    guessField.disabled = true;
+    guessSubmit.disabled = true;
+    resetButton = document.createElement('button');
+    resetButton.textContent = '开始新游戏';
+    document.body.appendChild(resetButton);
+    resetButton.addEventListener('click', resetGame);
 }
 
-let storedName = localStorage.getItem('name');
-if(storedName) {
-    setUserName();
-} else {
-    setHeading(storedName);
-}
+function resetGame() {
+    guessCount = 1;
 
-let myButton = document.querySelector('button');
-myButton.onclick = setUserName;
+    const resetParas = document.querySelectorAll('.resultParas p');
+    for (let i = 0 ; i < resetParas.length; i++) {
+        resetParas[i].textContent = '';
+    }
+
+    resetButton.parentNode.removeChild(resetButton);
+
+    guessField.disabled = false;
+    guessSubmit.disabled = false;
+    guessField.value = '';
+    guessField.focus();
+
+    lastResult.style.backgroundColor = 'white';
+
+    target = Math.floor(Math.random() * 100) + 1;
+}
