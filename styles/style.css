@@ -2,6 +2,39 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.top-buffer { margin-top:50px; }
+header {
+    width: 100%;
+    text-align: center;
+}
+
+nav {
+    background-color: antiquewhite;
+    text-align: center;
+}
+
+.grid {
+    text-align: center;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
 
 
+/* 
+    Cascading rules:
+    1. Priority: from high to low
+    !important -> id -> chaining -> class -> selector
+    !important -> #id -> h5.class -> .class -> h5
+    2. h5.blue { color: blue; }
+       h5.grey { color: grey; }
+       will appear grey
+    3. vertical margin collapse
+    #div1 { margin-bottom: 20px; }
+    #div2 { margin-top: 30px; }
+    the margin with higher value will set as margin distance between two div
+    4. Difference between visibility and display?
+    display: none, the element will be gone from webpage
+    visibility: hidden, inspect will still see the element and element will take the space.
+    5. box-sizing: border-box; instead of default content-box
+    6. z-index; higher number reflect display higher
+*/

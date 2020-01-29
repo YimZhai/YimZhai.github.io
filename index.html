@@ -6,143 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Name Here</title>
     <link href="styles/style.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-          crossorigin="anonymous">
-    <script src="scripts/main.js" async></script>
+          crossorigin="anonymous"> -->
 </head>
 <body>
-    <main class="container-fluid">
-        <header></header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <img src="images/sm-log.png" alt="Logo" class="navbar-brand" width="32" height="32"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-                
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="https://yimingzhaius.wixsite.com/birthday/blog">游记</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Game
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Option1</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Option2</a>
-                        <a class="dropdown-item" href="#">Option3</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/recipe">Angular App</a>
-                </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form>
-            </div>
-        </nav>
-    
-        <section class="row top-buffer">
-            <div class="col-sm-1"></div>
-            <div class="col">
-                <h3>抽奖规则</h3>
-                <ul>
-                    <li>奖品分布，500一个，300一个，150两个，100两个，50三个，单位为美元</li>
-                    <li>抽奖为每月一次机会，过期则不可再次参与上月抽奖</li>
-                    <li>中奖金额不可拆分使用</li>
-                    <li>中奖金额可以累积使用，累计金额上限为1000美元或者次数为6次，以哪个先到为准</li>
-                    <li>累计到达上限后，需使用后，下一次抽奖才能生效，否则抽奖结果将无效</li>
-                    <li>中奖金额的有效期为自中奖日起一年内有效</li>
-                    <li>如果！抽到谢谢参与，可以有两种选择：本月自动获得$25的补偿或者下个月获得两次抽奖机会, 累计抽奖次数最多为2</li>
-                </ul>
-                <hr>
-                <h3>抽奖结果统计</h3>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">时间</th>
-                            <th scope="col">中奖金额</th>
-                            <th scope="col">中奖时间</th>
-                            <th scope="col">是否使用</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">Sep 2019</th>
-                            <td>$50</td>
-                            <td>Sep 30</td>
-                            <td>Yes</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Oct 2019</th>
-                            <td>谢谢参与</td>
-                            <td>Oct 5</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Nov 2019</th>
-                            <td>$100</td>
-                            <td>Nov 2</td>
-                            <td>Nov 28</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Dec 2019</th>
-                            <td>$300</td>
-                            <td>Dec 1</td>
-                            <td>No</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="col text-center">
-                <h1><strong>Wheel of Fortune</strong></h1>
-                <iframe src="https://wheeldecide.com/e.php?c1=$500&c2=谢谢参与&c3=$50&c4=谢谢参与&c5=$100
+    <header>
+        <h1>菜谱</h1>
+    </header>
+    <nav>
+        <h2>筛选</h2>
+        <!-- <a class="nav-link" href="/recipe">Angular App</a> -->
+        <!-- <a class="nav-link disabled" href="https://yimingzhaius.wixsite.com/birthday/blog">游记</a> -->
+        <!-- <iframe src="https://wheeldecide.com/e.php?c1=$500&c2=谢谢参与&c3=$50&c4=谢谢参与&c5=$100
                 &c6=谢谢参与&c7=$150&c8=谢谢参与&c9=$50&c10=谢谢参与
                 &c11=$300&c12=谢谢参与&c13=$100&c14=谢谢参与&c15=$150&c16=谢谢参与&c17=$50&c18=谢谢参与&time=5" 
-                width="500" height="500" scrolling="no" frameborder="0"></iframe>
-            </div>
-            <div class="col-sm-1"></div>
-
+                width="500" height="500" scrolling="no" frameborder="0"></iframe> -->
+    </nav>
+    <article class="grid">
+        <section class="box">
+            <p>Test 1</p>
+            <figure>
+                <img src="https://codecademy-content.s3.amazonaws.com/courses/Semantic+HTML/dogimage.jpeg"/>
+                <figcaption>figure practice</figcaption>
+            </figure> 
         </section>
+        <section class="box">
+            <p>Test 2</p>
+            <audio controls>
+                <source src="https://codecademy-content.s3.amazonaws.com/courses/Semantic+HTML/dogBarking.mp3" type="audio/mp3">
+            </audio> 
+        </section>
+        <section class="box">
+            <p>Test 3</p>
+            <embed src="https://codecademy-content.s3.amazonaws.com/courses/Semantic+HTML/dog-on-beach.gif"/ style="max-width: inherit;">
+        </section>
+    </article>
     
-    </main>
 
-    <section>
-        <h1>section practice</h1>
-        <article>
-            <p>article practice</p>
-        </article>
-        <aside>
-            <p>aside practice</p>
-        </aside>
-    </section>
-    <figure>
-        <img src="https://codecademy-content.s3.amazonaws.com/courses/Semantic+HTML/dogimage.jpeg"/>
-        <figcaption>figure practice</figcaption>
-    </figure> 
-    <audio controls>
-        <source src="https://codecademy-content.s3.amazonaws.com/courses/Semantic+HTML/dogBarking.mp3" type="audio/mp3">
-    </audio> 
-    <video src="https://codecademy-content.s3.amazonaws.com/courses/Semantic+HTML/dog+video.mp4" controls></video>
-    <embed src="https://codecademy-content.s3.amazonaws.com/courses/Semantic+HTML/dog-on-beach.gif"/>
-
+    
+    
+    
+    
     <footer>
         <p>footer practice</p>
         <p>Post by: Yimz</p>
-        <p>footer practice</p>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    <script src="scripts/main.js" async></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
             crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -150,6 +63,6 @@
             crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
+            crossorigin="anonymous"></script> -->
 </body>
 </html>
